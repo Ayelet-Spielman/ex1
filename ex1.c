@@ -22,7 +22,7 @@ int main() {
   Print the bit in this position. */
   
   // Set bit
-  printf("Set bit: ");
+  printf("\nSet bit: \n");
   int num2, p2;
   printf("Please enter a number: \n");
   //Input number
@@ -67,7 +67,7 @@ int main() {
   //Input number
   scanf("%d", &num4);
   //If the right-most bit is 0, the number is even and we want to print 1 and vice versa.
-  int eo = ~(num4 & 1);
+  int eo = !(num4 & 1);
   printf("%d", eo);
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
@@ -84,9 +84,9 @@ int main() {
   //The sum of the 2 numbers
   int sum = num5 + num6;
   //Printing the sum in hexadecimal
-  printf("The sum in hexadecimal: %x", sum);
+  printf("The sum in hexadecimal: %X", sum);
   //Printing the bits in the 3rd, 5th, 7th and 11th positions
-  int position3 = (sum << 3) & 1, position5 = (sum << 5) & 1, position7 = (sum << 7) & 1, position11 = (sum << 11) & 1;
+  int position3 = (sum >> 3) & 1, position5 = (sum >> 5) & 1, position7 = (sum >> 7) & 1, position11 = (sum >> 11) & 1;
   printf("\nThe 3,5,7,11 bits are: %d%d%d%d\n", position3, position5, position7, position11);
 
   /* Scan two integers in octal base
